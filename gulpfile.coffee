@@ -1,6 +1,7 @@
 {src, dest, watch} = require 'gulp'
 del = require 'del'
 pug = require 'gulp-pug'
+htmlbeautify = require 'gulp-html-beautify'
 plumber = require 'gulp-plumber'
 notify = require　'gulp-notify'
 sass = require 'gulp-sass'
@@ -13,6 +14,7 @@ html = ->
   src './src/**/*.pug'
   .pipe plumber　{ errorHandler: notify.onError　"Error: <%= error.message %>" }
   .pipe pug()
+  .pipe htmlbeautify()
   .pipe dest './dist/'
 
 css = -> 
