@@ -1,1 +1,38 @@
-html
+doctype html
+html(lang="jp")
+  head
+    title="請求書"
+    link(rel="stylesheet" type="text/css" href="stysheet.css")
+  body
+    header
+        h2 請求書
+        .invice_date 2020/06/10 作成
+        .my_profile
+            .my_name Takaaki Iwamoto
+            .my_address zip:862-0950 Suizenji, Chuo-ku, Kumamoto ctiy
+            .my_email iwamoto.takaaki@gmail.com
+            .my_phone XXX-XXXX-XXXX
+    section.bill_to
+        h2 お請求先
+        .your_name Mr. John Smith
+        .billing_term 2020/05 月分
+    section.details
+        h2 請求明細
+        .detal_header
+            .detail_sec 作業日
+            .detail_sec 項目
+            .detail_sec 金額
+        .datail_row
+            .detail_date 2020/05/05
+            .detail_title XXページの修正
+            .detail_price ¥1,000-
+        .datail_row
+            .detail_date 2020/05/05
+            .detail_title XXページの作成
+            .detail_price ¥5,000-
+    section.sumally
+        h2 請求合計
+        .sumally_price ¥1,000-
+    footer
+        .billing_priod
+        .account_number
