@@ -1,0 +1,81 @@
+// bootstrapをインポートしておく
+@import "bootstrap";
+
+h2
+    background-color: var(--dark)
+    color: var(--light)
+    text-align: center
+    margin-top: 1rem
+    margin-bottom: 0
+    padding: 0.5rem 0
+    height: 3rem
+
+.container
+    margin-top: 0.5rem
+
+header
+    .invice-date
+        background-color: var(--gray)
+        padding-right: 1rem
+        text-align: right
+        color: var(--light)
+        height: 2rem
+    .container
+        margin-top: 0.5rem
+        display: flex
+        justify-content: flex-end
+        .my-profile
+            display: block
+            padding: 0 1rem
+            border: solid 0.5px
+            .my-name
+                text-decoration: underline 
+
+.bill-to
+    .your-name
+        margin-top: 1rem
+        font-size: 1.5rem
+        font-weight: bold
+        text-align: center
+        text-decoration: underline 
+    .billing-term
+        text-align: center
+        font-size: 1.5
+
+.details
+    .details-row
+        display: grid
+        grid-template-areas: "date title price"
+        grid-template-columns: 2fr 5fr 2fr
+        >div
+            border-left: dashed 1px 
+            border-bottom: dashed 1px var(--gray)
+        .details_date
+            grid-area: date
+        .details-title
+            grid-area: title
+        .details-price
+            grid-area: price
+    .details-header
+        background-color: var(--gray)
+        color: var(--light)
+
+.total
+    .total-price
+        background-color: var(--gray)
+        margin: 0.5rem 0
+        padding: 0.5rem 0
+        text-align: center
+        color: var(--orange)
+        font-size: 1.5rem
+        text-decoration: underline 
+
+footer
+    .container
+        display: flex
+        justify-content: space-between
+        .billing-priod
+                    text-decoration: underline 
+        .account-number
+            border: solid 1px 
+            padding: 0.5rem
