@@ -1,0 +1,41 @@
+doctype html
+html(lang="jp")
+  head
+    title="請求書"
+    link(rel="stylesheet" type="text/css" href="./css/style.css")
+  body
+    header
+        h2 請求書
+        .issue #{ invoice.issue } 作成
+        .container
+            .my-profile
+                .my-name= profile.name
+                .my-address 住所: #{ profile.adress }
+                .my-email e-mail: #{ profile.email }
+                .my-phone TEL: #{ profile.phone }
+    section.bill-to
+        h2 お請求先
+        .container
+            .your-name #{ invoice.name } 様
+            if invoice.term
+                .billing-term #{ invoice.term } 分
+    section.details
+        h2 請求明細
+        .container
+            .details-row.details-header
+                .details-date 作業日
+                .details-title 項目
+                .details-price 金額
+            for detail in invoice.details
+                .details-row
+                    .details-date #{ detail.date }
+                    .details-title #{ detail.title }
+                    .details-price= '¥' + detail.price.toLocaleString() + '-'
+    section.total
+        h2 請求合計
+        .container
+            .total-price= '¥' + invoice.total.toLocaleString() + '-'
+    footer
+        .container
+            .billing-priod 支払い期限: #{ invoice.priod }
+            .account-number !{ profile.account }

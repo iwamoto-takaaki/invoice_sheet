@@ -12,7 +12,7 @@ clean = ->
   del ['./dist/**', '!./dist']
 
 html = ->
-  src './src/**/*.pug'
+  src ['./src/**/*.pug', '!./src/includes/**/*.pug']
   .pipe plumber　{ errorHandler: notify.onError　"Error: <%= error.message %>" }
   .pipe pug()
   .pipe htmlbeautify()

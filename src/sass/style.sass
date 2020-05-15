@@ -14,7 +14,7 @@ h2
     margin-top: 0.5rem
 
 header
-    .invice-date
+    .issue
         background-color: var(--gray)
         padding-right: 1rem
         text-align: right
@@ -31,7 +31,7 @@ header
             .my-name
                 text-decoration: underline 
 
-.bill-to
+.bill-to, .paid-from
     .your-name
         margin-top: 1rem
         font-size: 1.5rem
@@ -48,8 +48,8 @@ header
         grid-template-areas: "date title price"
         grid-template-columns: 2fr 5fr 2fr
         >div
-            border-left: dashed 1px 
-            border-bottom: dashed 1px var(--gray)
+            border: 1px dashed var(--gray)
+            padding: 0 0.5rem
         .details_date
             grid-area: date
         .details-title

@@ -1,0 +1,13 @@
+- 
+    var invoice = {
+        issue: '2020/05/07',
+        name: 'john smith',
+        term: '2020/04',
+        priod: '2020/06/30',
+        paid: '2020/06/18',
+        details: [
+            {date: '2020/04/22', title: 'something (1)', price: 10000},
+            {date: '2020/04/23', title: 'something (2)', price: 500},
+        ]
+    }
+    invoice.total = invoice.details.map(x => x.price).reduce((acc, cur) => acc + cur)
