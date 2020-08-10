@@ -39,7 +39,7 @@ server = (cb) ->
   src './dist/'
   .pipe webserver {
     host: process.env.DEV_HOST || 'localhost',
-    port: process.env.DEV_PORT || 8080,
+    port: process.env.DEV_PORT || 8090,
     livereload: true
   }
   cb()
